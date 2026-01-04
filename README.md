@@ -37,7 +37,7 @@ E(R_i) = R_f + \beta_i (E(R_m) - R_f)
 - **Price Used:** Closing prices
 - **Time Period:** Configurable by user
 
-## Technologies & Libraries
+## Libraries
 - Python
 - NumPy
 - Pandas

@@ -1,56 +1,15 @@
-# capm_indian_stocks_python
-# CAPM Analysis for Indian Stocks using Python
+# **CAPM Analysis for Indian Stocks Using Python**
 
-## 📌 Overview
-This project implements the **Capital Asset Pricing Model (CAPM)** using Python to analyze **Indian equities listed on the NSE**, with **NIFTY 50** as the market benchmark.  
-It estimates **systematic risk (Beta)**, evaluates **model fit (R²)** through regression analysis, and calculates **expected returns**, combining financial theory with real-world market data.
+This project applies the **Capital Asset Pricing Model (CAPM)** to analyze the risk and return characteristics of **Indian stocks listed on the NSE**, using the **NIFTY 50 Index (`^NSEI`) as the market benchmark**. The objective is to combine **financial theory with practical data analytics** by estimating each stock’s **systematic risk (Beta)**, measuring **model fit through R²**, and calculating **expected returns** based on a user-defined **risk-free rate**.
 
-## 🎯 Objectives
-Apply the **CAPM framework** to Indian stocks
-Estimate **Beta** using linear regression
-Measure **R-squared** to assess explanatory power
-Calculate **expected returns** using a given risk-free rate
-Visualise **risk–return relationships** through regression plots
-Bridge **financial theory and data-driven analysis**
+The methodology begins with fetching **historical closing price data** for selected NSE stocks and the NIFTY 50 over a **user-configurable time period**. From this data, **daily returns** are computed and used in a **linear regression model**, where stock returns are regressed against market returns. This allows the estimation of key CAPM metrics, including **Beta (β)**, **Alpha (α)**, and **R-squared (R²)**, which help evaluate both the stock’s sensitivity to market movements and the explanatory power of the model.
 
-## 📊 Methodology
-1. Fetch historical price data for selected stocks and NIFTY 50  
-2. Compute **daily returns**
-3. Perform **linear regression** of stock returns against market returns
-4. Estimate:
-    **Beta (β)** – systematic risk
-    **Alpha (α)** – excess return component
-    **R²** – goodness of fit
-5. Calculate **expected return** using the CAPM formula:
+Using the CAPM equation, the project then calculates the **expected return** for each stock:
 
-\[
-E(R_i) = R_f + \beta_i (E(R_m) - R_f)
-\]
+E(R_i)=R_f+\beta_i\left(E(R_m)-R_f\right)
 
-6. Visualize results using scatter plots with regression lines
+The analysis is further supported by **scatter plots with fitted regression lines**, helping visualize the **risk–return relationship** in an intuitive way.
 
-## 🧾 Data & Assumptions
-- **Market Proxy:** NIFTY 50 Index (`^NSEI`)
-- **Stock Universe:** NSE-listed equities (e.g., Reliance, TCS, HDFC Bank, Infosys)
-- **Returns Frequency:** Daily
-- **Risk-Free Rate:** User-defined (example: 4.5%)
-- **Price Used:** Closing prices
-- **Time Period:** Configurable by user
+Final outputs include **regression summaries, Beta estimates, R² values, expected returns, formatted result tables, and visual regression plots**, making it a strong demonstration of both **financial modeling and data-driven analysis skills**.
 
-## Libraries
-- Python
-- NumPy
-- Pandas
-- yFinance
-- SciPy
-- Statsmodels
-- Matplotlib
-- Seaborn
-- Tabulate
-
-## 📈 Outputs
-  Regression summaries for each stock
-  Estimated **Beta**, **R²**, and **Expected Return**
-  Tabulated results for easy interpretation
-  Scatter plots with fitted regression lines
 
